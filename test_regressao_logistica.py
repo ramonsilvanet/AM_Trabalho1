@@ -1,9 +1,9 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-
 from aprendizado_maquina.bgd import gradiente_descendente_batch
-from aprendizado_maquina.computar_custo.regressao_logistica import custo_regressao_logistica
+
+from aprendizado_maquina.regressao_logistica import custo_regressao_logistica
 
 data = pd.read_csv('data/ex2data1.txt', header=None, names=['Prova 1', 'Prova 2', 'Aprovado'])
 data.head()
