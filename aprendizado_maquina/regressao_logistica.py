@@ -26,3 +26,7 @@ def gradiente_descendente_batch(theta, X, y):
         grad[i] = np.sum(term) / len(X)
 
     return grad
+
+def predizer(theta, X):
+    probabilidade = sigmoide(X * theta.T)
+    return [1 if x >= 0.5 else 0 for x in probabilidade]
