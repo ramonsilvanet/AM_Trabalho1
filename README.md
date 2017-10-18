@@ -4,7 +4,7 @@ Trabalho da disciplina Aprendizado de máquina, ministrada pelo professor Eduard
 
 ## Trabalho 1 
 
-    1. [Regressão Linear Simples] (https://github.com/ramonsilvanet/trabalho-aprendizado-maquina/blob/regressao-linear-regularizada/exercicio_1_regressao_linear_simplesi.ipynb)
+    1. <a href='https://github.com/ramonsilvanet/trabalho-aprendizado-maquina/blob/regressao-linear-regularizada/exercicio_1_regressao_linear_simplesi.ipynb'>Regressão Linear Simples</a>
     2. [Regressão Linear Multivariáveis] (https://github.com/ramonsilvanet/trabalho-aprendizado-maquina/blob/regressao-linear-regularizada/exercicio_2_regressao_linear_multi.ipynb)
     3. [Regressção Logsística] (https://github.com/ramonsilvanet/trabalho-aprendizado-maquina/blob/regressao-linear-regularizada/exericio_3_regressao_logistica.ipynb)
 
