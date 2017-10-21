@@ -1,12 +1,9 @@
 import numpy as np
+from scipy.optimize import minimize
 
 def custo_regressao_linear(X, y, theta):
     inner = np.power(((X * theta.T) - y), 2)
     return np.sum(inner) / (2 * len(X))
-
-def custo_regressao_linear_regularizada(theta, X, y, reg):
-    m = y.size
-    return custo_regressao_linear(X, y, theta) +  (reg / (2 * m)) * np.sum(np.square(theta[1:]))
 
 def gradiente_descendente_batch(X, y, theta, alpha, iters):
     temp = np.matrix(np.zeros(theta.shape))
@@ -25,19 +22,20 @@ def gradiente_descendente_batch(X, y, theta, alpha, iters):
 
     return theta, cost
 
-def gradiente_descendente_batch_regularizado(X, y, theta, alpha, custo, iters, lamb):
-    temp = np.matrix(np.zeros(theta.shape))
-    parameters = int(theta.ravel().shape[1])
-    cost = np.zeros(iters)
+def custo_regressao_linear_regularizada(theta, X, y, reg):
+    m = y.size
+    h = X.dot(theta)
+    J = (1/(2*m))*np.sum(np.square(h-y)) + (reg/(2*m))*np.sum(np.square(theta[1:]))
+    return(J)
 
-    for i in range(iters):
-        error = (X * theta.T) - y
+def gradiente_descendente_batch_com_regularicao(theta, X, y, reg):
+    m = y.size
+    h = X.dot(theta.reshape(-1,1))
+    grad = (1/m)*(X.T.dot(h-y))+ (reg/m)*np.r_[[[0]],theta[1:].reshape(-1,1)]    
+    return(grad.flatten())
 
-        for j in range(parameters):
-            term = np.multiply(error, X[:, j])
-            temp[0, j] = theta[0, j] - ((alpha / len(X)) * np.sum(term))
-
-        theta = temp
-        cost[i] = custo(theta, X, y, lamb)
-
-    return theta, cost
+def treinar_modelo(X, y, regularizacao):        
+    initial_theta = np.array([[15],[15]])
+    resultado = minimize(custo_regressao_linear_regularizada, initial_theta, args=(X,y,regularizacao), 
+               method=None, jac=gradiente_descendente_batch_com_regularicao, options={'maxiter':5000})
+    return resultado
