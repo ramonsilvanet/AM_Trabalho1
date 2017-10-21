@@ -24,3 +24,20 @@ def gradiente_descendente_batch(X, y, theta, alpha, iters):
         cost[i] = custo_regressao_linear(X, y, theta)
 
     return theta, cost
+
+def gradiente_descendente_batch_regularizado(X, y, theta, alpha, custo, iters, lamb):
+    temp = np.matrix(np.zeros(theta.shape))
+    parameters = int(theta.ravel().shape[1])
+    cost = np.zeros(iters)
+
+    for i in range(iters):
+        error = (X * theta.T) - y
+
+        for j in range(parameters):
+            term = np.multiply(error, X[:, j])
+            temp[0, j] = theta[0, j] - ((alpha / len(X)) * np.sum(term))
+
+        theta = temp
+        cost[i] = custo(theta, X, y, lamb)
+
+    return theta, cost
