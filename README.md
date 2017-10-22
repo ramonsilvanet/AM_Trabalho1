@@ -1,6 +1,6 @@
 # Trabalho da disciplina Aprendizado de máquina
 
-Trabalho da disciplina Aprendizado de máquina, ministrada pelo professor Eduardo Bezerra.
+Trabalho da disciplina Aprendizado de máquina, ministrada pelo professor [Eduardo Bezerra](http://eic.cefet-rj.br/~ebezerra/).
 
 ## Trabalho 1 
 * [Regressão Linear Simples](./exercicio_1_regressao_linear_simplesi.ipynb)
