@@ -12,3 +12,6 @@ Trabalho da disciplina Aprendizado de máquina, ministrada pelo professor Eduard
 * [Regressão Linear com Regularização](./exericio_5_regressao_linear_regularizada.ipynb)
 * [Curvas de Aprendizado](./exercicio_6_vies_variancia.ipynb)
 * [Regressão Polinomial](./exercicio_7_regressao_polinomial.ipynb)
+
+## Trabalho 2 B
+* [Detecção de Anomalias](./exerc%C3%ADcio_8_deteccao_de_anomalias.ipynb)
