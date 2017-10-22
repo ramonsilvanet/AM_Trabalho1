@@ -15,3 +15,4 @@ Trabalho da disciplina Aprendizado de máquina, ministrada pelo professor Eduard
 
 ## Trabalho 2 B
 * [Detecção de Anomalias](./exerc%C3%ADcio_8_deteccao_de_anomalias.ipynb)
+* [Filtragem Colaborativa](./exercicio_9_filtragem_colaborativa.ipynb)
