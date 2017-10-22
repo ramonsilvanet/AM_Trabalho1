@@ -11,3 +11,4 @@ Trabalho da disciplina Aprendizado de máquina, ministrada pelo professor Eduard
 * [Regressão Logística com regularização](./exericio_4_regressao_logistica_regularizada.ipynb)
 * [Regressão Linear com Regularização](./exericio_5_regressao_linear_regularizada.ipynb)
 * [Curvas de Aprendizado](./exercicio_6_vies_variancia.ipynb)
+* [Regressão Polinomial](./exercicio_7_regressao_polinomial.ipynb)
